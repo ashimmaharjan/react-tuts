@@ -27,7 +27,13 @@ const Home = () => {
     }, []);
 
     return (
+
+
         <div className="home grid grid-cols-2 gap-5 mt-5">
+
+            {/* Blog list from Json Server  */}
+            <BlogsFromJsonServer></BlogsFromJsonServer>
+
             <div className="border p-3">
                 <h1 className="text-xl font-semibold text-gray-600">All Blogs</h1>
                 {blogs.map((blog) => (
@@ -54,7 +60,7 @@ const Home = () => {
                 <DeleteBlogsList blogs={probBlogs} title="Function as Props" handleDelete={handleDelete}></DeleteBlogsList>
             </div>
 
-            <BlogsFromJsonServer></BlogsFromJsonServer>
+
         </div>
 
     );
