@@ -1,0 +1,16 @@
+{
+    "blogs": [
+        {
+            "title": "Mero pyaro Surkhet",
+            "body": "lorem ipsum.....................",
+            "author": "Prakash Bista",
+            "id": 1
+        },
+        {
+            "title": "Mero pyaro Chitwan",
+            "body": "lorem ipsum.....................",
+            "author": "Nikesh Pun Magar",
+            "id": 2
+        }
+    ]
+}

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogsList from "./Blogs-List";
 import DeleteBlogsList from "./DeleteBlogsList";
+import BlogsFromJsonServer from "./BlogsFromJsonServer";
 
 const Home = () => {
     const [blogs, setBlogs] = useState([
@@ -20,6 +21,10 @@ const Home = () => {
         const newBlogs = probBlogs.filter(blog => blog.id !== id);
         setPropBlogs(newBlogs);
     }
+
+    useEffect(() => {
+        console.log('use effect ran');
+    }, []);
 
     return (
         <div className="home grid grid-cols-2 gap-5 mt-5">
@@ -48,6 +53,8 @@ const Home = () => {
             <div className="border p-3">
                 <DeleteBlogsList blogs={probBlogs} title="Function as Props" handleDelete={handleDelete}></DeleteBlogsList>
             </div>
+
+            <BlogsFromJsonServer></BlogsFromJsonServer>
         </div>
 
     );
